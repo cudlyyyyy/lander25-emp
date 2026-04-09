@@ -1,155 +1,175 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empfohlen - Geld verdienen beim Testen von Spielen</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empfohlen - Geld verdienen beim Testen von Spielen</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-            overflow-x: hidden;
-        }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
 
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            min-height: 100vh;
-            position: relative;
-        }
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);
+color:white;
+overflow-x:hidden;
+}
 
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            animation: fadeInDown 0.8s ease-out;
-        }
+.container{
+max-width:500px;
+margin:0 auto;
+padding:20px;
+min-height:100vh;
+}
 
-        .logo {
-            width: 200px;
-            height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-            border-radius: 6px;
-        }
+.header{text-align:center;margin-bottom:25px;}
 
-        .hero-text {
-            font-size: 28px;
-            font-weight: 800;
-            background: linear-gradient(45deg, #c41e3a, #e74c3c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
+.logo{
+width:220px;
+max-width:100%;
+border-radius:16px;
+object-fit:cover;
+margin-bottom:20px;
+}
 
-        .subtitle {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
+.hero-text{
+font-size:28px;
+font-weight:800;
+background:linear-gradient(45deg,#c41e3a,#e74c3c);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:10px;
+}
 
-        .download-btn {
-            background: linear-gradient(135deg, #c41e3a, #e74c3c);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            padding: 18px 40px;
-            font-size: 18px;
-            font-weight: 700;
-            width: 100%;
-            cursor: pointer;
-        }
+.subtitle{
+font-size:16px;
+opacity:0.9;
+margin-bottom:20px;
+}
 
-        .steps {
-            margin-top: 30px;
-        }
+.earnings-banner{
+background:rgba(255,255,255,0.08);
+border:2px solid #c41e3a;
+border-radius:15px;
+padding:20px;
+text-align:center;
+margin-bottom:25px;
+}
 
-        .step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding: 15px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-            border-left: 4px solid #c41e3a;
-        }
+.earnings-amount{
+font-size:32px;
+font-weight:900;
+}
 
-        .step-number {
-            width: 30px;
-            height: 30px;
-            background: #c41e3a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-        }
+.download-btn{
+width:100%;
+padding:18px;
+font-size:18px;
+font-weight:700;
+background:linear-gradient(135deg,#c41e3a,#e74c3c);
+border:none;
+border-radius:12px;
+color:white;
+cursor:pointer;
+}
 
-        .step-text {
-            font-size: 16px;
-            font-weight: 600;
-        }
-    </style>
+.steps{
+margin-top:25px;
+}
+
+.step{
+display:flex;
+align-items:center;
+margin-bottom:12px;
+padding:15px;
+background:rgba(255,255,255,0.05);
+border-radius:10px;
+border-left:4px solid #c41e3a;
+}
+
+.step-number{
+width:30px;
+height:30px;
+background:#c41e3a;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-right:15px;
+font-size:14px;
+}
+
+.step-text{font-weight:600;}
+</style>
 </head>
+
 <body>
 
 <div class="container">
-    <div class="header">
-        <!-- ✅ UPDATED IMAGE -->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWQiW4K9QalQD4JL4N4JbkoxPGDm2r6DJDg&s" alt="Empfohlen" class="logo">
 
-        <div class="hero-text">Geld verdienen beim Spielen!</div>
-        <div class="subtitle">Verwandle deine Spielzeit in echtes Geld</div>
-    </div>
+<div class="header">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWQiW4K9QalQD4JL4N4JbkoxPGDm2r6DJDg&s" class="logo">
 
-    <button class="download-btn" id="downloadBtn">
-        🚀 JETZT GELD VERDIENEN
-    </button>
+<div class="hero-text">Teste Mobile Games & verdiene Geld</div>
 
-    <div class="steps">
-        <div class="step">
-            <div class="step-number">1</div>
-            <div class="step-text">Empfohlen App herunterladen</div>
-        </div>
-        <div class="step">
-            <div class="step-number">2</div>
-            <div class="step-text">Mobile Spiele testen</div>
-        </div>
-        <div class="step">
-            <div class="step-number">3</div>
-            <div class="step-text">Sofort bezahlt werden</div>
-        </div>
-    </div>
+<div class="subtitle">
+Lade die App herunter, spiele einfache Games und lass dir deine Belohnung auszahlen
+</div>
+</div>
+
+<div class="earnings-banner">
+<div>Durchschnittliche Einnahmen</div>
+<div class="earnings-amount">100€+ pro Tag</div>
+</div>
+
+<button class="download-btn" id="downloadBtn">
+🚀 Jetzt App herunterladen
+</button>
+
+<div style="margin-top:10px;text-align:center;font-size:13px;color:#ccc;">
+✅ Kostenlos • ⚡ Schneller Start • 💸 Auszahlung möglich
+</div>
+
+<div class="steps">
+<div class="step">
+<div class="step-number">1</div>
+<div class="step-text">App herunterladen</div>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<div class="step-text">Spiele testen & Aufgaben erfüllen</div>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<div class="step-text">Geld auszahlen lassen</div>
+</div>
+</div>
+
 </div>
 
 <script>
-function getUrlParameter(name) {
-    name = name.replace(/[\\[]/, '\\[').replace(/[\\]]/, '\\]');
-    const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    const results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\\+/g, ' '));
+function getUrlParameter(name){
+name=name.replace(/[\\[]/,'\\[').replace(/[\\]]/,'\\]');
+const regex=new RegExp('[\\?&]'+name+'=([^&#]*)');
+const results=regex.exec(location.search);
+return results===null?'':decodeURIComponent(results[1].replace(/\\+/g,' '));
 }
 
-function setupDownloadButton() {
-    const sub2Param = getUrlParameter('sub2');
+function setupDownloadButton(){
+const sub2Param=getUrlParameter('sub2');
 
-    // ✅ UPDATED AFFILIATE LINK
-    let finalUrl = 'https://raintrcks.com/r/eyJ0IjoiZW1wZm9obGVuIiwidSI6IjY5YTEwOTZkYTA5OGFmODc1MWVkNzIyNiIsInRzIjoxNzc1NzQ0ODgyNzE1fQ';
+let finalUrl='https://raintrcks.com/r/eyJ0IjoiZW1wZm9obGVuIiwidSI6IjY5YTEwOTZkYTA5OGFmODc1MWVkNzIyNiIsInRzIjoxNzc1NzQ3MzY0NzEwfQ?s2=DEslideTem';
 
-    if (sub2Param) {
-        const separator = finalUrl.includes('?') ? '&' : '?';
-        finalUrl += separator + 'sub2=' + encodeURIComponent(sub2Param);
-    }
+if(sub2Param){
+const separator=finalUrl.includes('?')?'&':'?';
+finalUrl+=separator+'sub2='+encodeURIComponent(sub2Param);
+}
 
-    document.getElementById('downloadBtn').addEventListener('click', function () {
-        window.open(finalUrl, '_blank');
-    });
+document.getElementById('downloadBtn').addEventListener('click',function(){
+window.open(finalUrl,'_blank');
+});
 }
 
 setupDownloadButton();
