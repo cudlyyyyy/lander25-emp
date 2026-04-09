@@ -4,44 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empfohlen - Geld verdienen beim Testen von Spielen</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body {
+            font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+            background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);
+            color:white;
+        }
+
+        .container {
+            max-width:500px;
+            margin:0 auto;
+            padding:20px;
+        }
+
+        .header { text-align:center; margin-bottom:30px; }
+
+        .logo {
+            width:200px;
+            border-radius:6px;
+            margin-bottom:20px;
+        }
+
+        .hero-text {
+            font-size:28px;
+            font-weight:800;
+            color:#e74c3c;
+            margin-bottom:10px;
+        }
+
+        .subtitle {
+            font-size:18px;
+            margin-bottom:20px;
+        }
+
+        .download-btn {
+            width:100%;
+            padding:18px;
+            font-size:18px;
+            font-weight:700;
+            background:#e74c3c;
+            border:none;
+            border-radius:10px;
+            color:white;
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header">
-        <!-- UPDATED IMAGE -->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWQiW4K9QalQD4JL4N4JbkoxPGDm2r6DJDg&s" alt="Empfohlen" class="logo">
+        <!-- ✅ UPDATED IMAGE -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWQiW4K9QalQD4JL4N4JbkoxPGDm2r6DJDg&s" class="logo">
 
         <div class="hero-text">Geld verdienen beim Spielen!</div>
         <div class="subtitle">Verwandle deine Spielzeit in echtes Geld</div>
     </div>
 
-    <div class="cta-section">
-        <button id="downloadBtn">🚀 JETZT GELD VERDIENEN</button>
-    </div>
+    <button class="download-btn" id="downloadBtn">
+        🚀 JETZT GELD VERDIENEN
+    </button>
 </div>
 
 <script>
-function getUrlParameter(name) {
-    name = name.replace(/[\\[]/, '\\[').replace(/[\\]]/, '\\]');
-    const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    const results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\\+/g, ' '));
+function getUrlParameter(name){
+    name=name.replace(/[\\[]/,'\\[').replace(/[\\]]/,'\\]');
+    const regex=new RegExp('[\\?&]'+name+'=([^&#]*)');
+    const results=regex.exec(location.search);
+    return results===null?'':decodeURIComponent(results[1].replace(/\\+/g,' '));
 }
 
-function setupDownloadButton() {
-    const sub2Param = getUrlParameter('sub2');
+function setupDownloadButton(){
+    const sub2Param=getUrlParameter('sub2');
 
     // ✅ UPDATED AFFILIATE LINK
-    let finalUrl = 'https://raintrcks.com/r/eyJ0IjoiZW1wZm9obGVuIiwidSI6IjY5YTEwOTZkYTA5OGFmODc1MWVkNzIyNiIsInRzIjoxNzc1NzQ0ODgyNzE1fQ';
+    let finalUrl='https://raintrcks.com/r/eyJ0IjoiZW1wZm9obGVuIiwidSI6IjY5YTEwOTZkYTA5OGFmODc1MWVkNzIyNiIsInRzIjoxNzc1NzQ0ODgyNzE1fQ';
 
-    if (sub2Param) {
-        const separator = finalUrl.includes('?') ? '&' : '?';
-        finalUrl += separator + 'sub2=' + encodeURIComponent(sub2Param);
+    if(sub2Param){
+        const separator=finalUrl.includes('?')?'&':'?';
+        finalUrl+=separator+'sub2='+encodeURIComponent(sub2Param);
     }
 
-    document.getElementById('downloadBtn').addEventListener('click', function () {
-        window.open(finalUrl, '_blank');
+    document.getElementById('downloadBtn').addEventListener('click',function(){
+        window.open(finalUrl,'_blank');
     });
 }
 
