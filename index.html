@@ -5,50 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empfohlen - Geld verdienen beim Testen von Spielen</title>
     <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
-            font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-            background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);
-            color:white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width:500px;
-            margin:0 auto;
-            padding:20px;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
         }
 
-        .header { text-align:center; margin-bottom:30px; }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInDown 0.8s ease-out;
+        }
 
         .logo {
-            width:200px;
-            border-radius:6px;
-            margin-bottom:20px;
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            border-radius: 6px;
         }
 
         .hero-text {
-            font-size:28px;
-            font-weight:800;
-            color:#e74c3c;
-            margin-bottom:10px;
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #c41e3a, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
         }
 
         .subtitle {
-            font-size:18px;
-            margin-bottom:20px;
+            font-size: 18px;
+            margin-bottom: 30px;
         }
 
         .download-btn {
-            width:100%;
-            padding:18px;
-            font-size:18px;
-            font-weight:700;
-            background:#e74c3c;
-            border:none;
-            border-radius:10px;
-            color:white;
-            cursor:pointer;
+            background: linear-gradient(135deg, #c41e3a, #e74c3c);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .steps {
+            margin-top: 30px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            border-left: 4px solid #c41e3a;
+        }
+
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background: #c41e3a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .step-text {
+            font-size: 16px;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -57,7 +102,7 @@
 <div class="container">
     <div class="header">
         <!-- ✅ UPDATED IMAGE -->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWQiW4K9QalQD4JL4N4JbkoxPGDm2r6DJDg&s" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWQiW4K9QalQD4JL4N4JbkoxPGDm2r6DJDg&s" alt="Empfohlen" class="logo">
 
         <div class="hero-text">Geld verdienen beim Spielen!</div>
         <div class="subtitle">Verwandle deine Spielzeit in echtes Geld</div>
@@ -66,29 +111,44 @@
     <button class="download-btn" id="downloadBtn">
         🚀 JETZT GELD VERDIENEN
     </button>
+
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-text">Empfohlen App herunterladen</div>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-text">Mobile Spiele testen</div>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-text">Sofort bezahlt werden</div>
+        </div>
+    </div>
 </div>
 
 <script>
-function getUrlParameter(name){
-    name=name.replace(/[\\[]/,'\\[').replace(/[\\]]/,'\\]');
-    const regex=new RegExp('[\\?&]'+name+'=([^&#]*)');
-    const results=regex.exec(location.search);
-    return results===null?'':decodeURIComponent(results[1].replace(/\\+/g,' '));
+function getUrlParameter(name) {
+    name = name.replace(/[\\[]/, '\\[').replace(/[\\]]/, '\\]');
+    const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    const results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\\+/g, ' '));
 }
 
-function setupDownloadButton(){
-    const sub2Param=getUrlParameter('sub2');
+function setupDownloadButton() {
+    const sub2Param = getUrlParameter('sub2');
 
     // ✅ UPDATED AFFILIATE LINK
-    let finalUrl='https://raintrcks.com/r/eyJ0IjoiZW1wZm9obGVuIiwidSI6IjY5YTEwOTZkYTA5OGFmODc1MWVkNzIyNiIsInRzIjoxNzc1NzQ0ODgyNzE1fQ';
+    let finalUrl = 'https://raintrcks.com/r/eyJ0IjoiZW1wZm9obGVuIiwidSI6IjY5YTEwOTZkYTA5OGFmODc1MWVkNzIyNiIsInRzIjoxNzc1NzQ0ODgyNzE1fQ';
 
-    if(sub2Param){
-        const separator=finalUrl.includes('?')?'&':'?';
-        finalUrl+=separator+'sub2='+encodeURIComponent(sub2Param);
+    if (sub2Param) {
+        const separator = finalUrl.includes('?') ? '&' : '?';
+        finalUrl += separator + 'sub2=' + encodeURIComponent(sub2Param);
     }
 
-    document.getElementById('downloadBtn').addEventListener('click',function(){
-        window.open(finalUrl,'_blank');
+    document.getElementById('downloadBtn').addEventListener('click', function () {
+        window.open(finalUrl, '_blank');
     });
 }
 
